@@ -24,16 +24,19 @@ index 3f78363..0000000
 - </application>
 diff --git a/resources/org.milkytracker.MilkyTracker.metainfo.xml b/resources/org.milkytracker.MilkyTracker.metainfo.xml
 new file mode 100644
-index 0000000..51f0ae2
+index 0000000..fb79814
 --- /dev/null
 +++ b/resources/org.milkytracker.MilkyTracker.metainfo.xml
-@@ -0,0 +1,28 @@
+@@ -0,0 +1,31 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<component type="desktop-application">
 +  <id>org.milkytracker.MilkyTracker</id>
 +  <launchable type="desktop-id">org.milkytracker.MilkyTracker.desktop</launchable>
 +  <metadata_license>CC0-1.0</metadata_license>
 +  <project_license>GPL-3.0+ AND BSD-3-Clause</project_license>
++  <provides>
++    <binary>milkytracker</binary>
++  </provides>
 +  <name>MilkyTracker</name>
 +  <developer_name>The MilkyTracker team</developer_name>
 +  <summary>Fast Tracker II inspired music tracker</summary>
