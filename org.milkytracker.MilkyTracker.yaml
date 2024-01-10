@@ -9,7 +9,7 @@ finish-args:
   - --socket=pulseaudio
   - --socket=fallback-x11
   - --socket=wayland
-  - --filesystem=xdg-music
+  - --filesystem=home
 cleanup:
   - '*.a'
   - /include
