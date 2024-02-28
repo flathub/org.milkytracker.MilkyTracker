@@ -47,8 +47,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/gdraheim/zziplib/archive/refs/tags/v0.13.72.tar.gz
-        sha256: 93ef44bf1f1ea24fc66080426a469df82fa631d13ca3b2e4abaeab89538518dc
+        url: https://github.com/gdraheim/zziplib/archive/refs/tags/v0.13.73.tar.gz
+        sha256: 2aa9d317f70060101064863e4e8fe698c32301e2d293d2b4964608cf2d5b2d8b
         x-checker-data:
           type: anitya
           project-id: 13802
@@ -71,6 +71,8 @@ modules:
     post-install:
       - install -Dm644 resources/pictures/carton.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/org.milkytracker.MilkyTracker.png
       - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
-      - desktop-file-edit --set-key="Icon" --set-value="org.milkytracker.MilkyTracker" ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
-      - desktop-file-edit --set-key="MimeType" --set-value="audio/x-mod;audio/x-xm;" ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+      - desktop-file-edit --set-key="Icon" --set-value="org.milkytracker.MilkyTracker"
+        ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+      - desktop-file-edit --set-key="MimeType" --set-value="audio/x-mod;audio/x-xm;"
+        ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
       - install -Dm644 resources/org.milkytracker.MilkyTracker.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.milkytracker.MilkyTracker.metainfo.xml
