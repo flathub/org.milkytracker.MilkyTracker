@@ -1,6 +1,6 @@
 app-id: org.milkytracker.MilkyTracker
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: milkytracker
 finish-args:
@@ -20,8 +20,6 @@ cleanup:
   - /share/rtmidi
 
 modules:
-  - shared-modules/libdecor/libdecor-0.2.0.json
-
   - name: rtmidi
     buildsystem: cmake-ninja
     sources:
