@@ -64,9 +64,9 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-      - type: patch
-        path: milkytracker.appdata.patch
     post-install:
+      - sed -i -e 's/milkytracker.desktop/org.milkytracker.MilkyTracker.desktop/g' resources/org.milkytracker.MilkyTracker.metainfo.xml
+      - sed -i -e 's/Icon=milkytracker/Icon=org.milkytracker.MilkyTracker/g' resources/milkytracker.desktop
       - install -Dm644 resources/pictures/carton.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/org.milkytracker.MilkyTracker.png
       - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
       - desktop-file-edit --set-key="Icon" --set-value="org.milkytracker.MilkyTracker"
