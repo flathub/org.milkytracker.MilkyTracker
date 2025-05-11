@@ -59,8 +59,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/milkytracker/MilkyTracker.git
-        tag: v1.04.00
-        commit: 7e9171488fc47ad2de646a4536794fda21e7303d
+        tag: v1.05.00
+        commit: 466403f2d3c74f219d4f901f86e6eefcc8f50d12
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
