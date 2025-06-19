@@ -3,6 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: milkytracker
+rename-desktop-file: milkytracker.desktop
 finish-args:
   - --device=dri
   - --share=ipc
@@ -66,9 +67,9 @@ modules:
           tag-pattern: ^v([\d.]+)$
     post-install:
       - install -Dm644 resources/pictures/carton.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/org.milkytracker.MilkyTracker.png
-      - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+      - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/milkytracker.desktop
       - desktop-file-edit --set-key="Icon" --set-value="org.milkytracker.MilkyTracker"
-        ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+        ${FLATPAK_DEST}/share/applications/milkytracker.desktop
       - desktop-file-edit --set-key="MimeType" --set-value="audio/x-mod;audio/x-xm;"
-        ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+        ${FLATPAK_DEST}/share/applications/milkytracker.desktop
       - install -Dm644 resources/org.milkytracker.MilkyTracker.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.milkytracker.MilkyTracker.metainfo.xml
