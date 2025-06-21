@@ -3,6 +3,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: milkytracker
+rename-desktop-file: milkytracker.desktop
 finish-args:
   - --device=dri
   - --share=ipc
@@ -45,8 +46,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/gdraheim/zziplib/archive/refs/tags/v0.13.79.tar.gz
-        sha256: ed6f3017bb353b4a8f730c31a2fa065adb2d264c00d922aada48a5893eda26e4
+        url: https://github.com/gdraheim/zziplib/archive/refs/tags/v0.13.80.tar.gz
+        sha256: 21f40d111c0f7a398cfee3b0a30b20c5d92124b08ea4290055fbfe7bdd53a22c
         x-checker-data:
           type: anitya
           project-id: 13802
@@ -59,18 +60,16 @@ modules:
     sources:
       - type: git
         url: https://github.com/milkytracker/MilkyTracker.git
-        tag: v1.04.00
-        commit: 7e9171488fc47ad2de646a4536794fda21e7303d
+        tag: v1.06
+        commit: fa63e6ba34482ce5effcbcc90978d7df5da94794
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-      - type: patch
-        path: milkytracker.appdata.patch
     post-install:
       - install -Dm644 resources/pictures/carton.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/org.milkytracker.MilkyTracker.png
-      - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+      - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/milkytracker.desktop
       - desktop-file-edit --set-key="Icon" --set-value="org.milkytracker.MilkyTracker"
-        ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+        ${FLATPAK_DEST}/share/applications/milkytracker.desktop
       - desktop-file-edit --set-key="MimeType" --set-value="audio/x-mod;audio/x-xm;"
-        ${FLATPAK_DEST}/share/applications/org.milkytracker.MilkyTracker.desktop
+        ${FLATPAK_DEST}/share/applications/milkytracker.desktop
       - install -Dm644 resources/org.milkytracker.MilkyTracker.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.milkytracker.MilkyTracker.metainfo.xml
