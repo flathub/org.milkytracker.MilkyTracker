@@ -35,8 +35,8 @@ modules:
   - name: lhasa
     sources:
       - type: archive
-        url: https://github.com/fragglet/lhasa/releases/download/v0.4.0/lhasa-0.4.0.tar.gz
-        sha256: a7fc883c304c508562fb93fa307a4c342b0c886fcc265f28b92dc0c39220c5b3
+        url: https://github.com/fragglet/lhasa/releases/download/v0.5.0/lhasa-0.5.0.tar.gz
+        sha256: bf8785c70609d21eb62b7dae7894f138888f889d3ce97868d502f6e13a792b1c
         x-checker-data:
           type: anitya
           project-id: 14822
