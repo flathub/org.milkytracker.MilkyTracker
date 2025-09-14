@@ -65,6 +65,8 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
+      - type: patch
+        path: 0001-Build-SET-CMP0004-OLD-only-if-CMake-4.0.patch
     post-install:
       - install -Dm644 resources/pictures/carton.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/org.milkytracker.MilkyTracker.png
       - install -Dm644 resources/milkytracker.desktop ${FLATPAK_DEST}/share/applications/milkytracker.desktop
